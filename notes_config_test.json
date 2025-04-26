@@ -1,0 +1,14 @@
+[
+    { "name": "Cs2", "midi":  37, "led_range": [  495,  513 ], "note_type": "Black" },
+    { "name": "C3",  "midi":  48, "led_range": [  825,  860 ], "note_type": "White" },
+    { "name": "Cs3", "midi":  49, "led_range": [  862,  882 ], "note_type": "Black" },
+    { "name": "C4",  "midi":  60, "led_range": [    1,   29 ], "note_type": "White" },
+    { "name": "Cs4", "midi":  61, "led_range": [   32,   52 ], "note_type": "Black" },
+    { "name": "C5",  "midi":  72, "led_range": [  362,  395 ], "note_type": "White" },
+    { "name": "Cs5", "midi":  73, "led_range": [  399,  419 ], "note_type": "Black" },
+    { "name": "C6",  "midi":  84, "led_range": [  735,  772 ], "note_type": "White" },
+    { "name": "Cs6", "midi":  85, "led_range": [  774,  794 ], "note_type": "Black" },
+    { "name": "C7",  "midi":  96, "led_range": [ 1107, 1141 ], "note_type": "White" },
+    { "name": "Cs7", "midi":  97, "led_range": [ 1144, 1165 ], "note_type": "Black" },
+    { "name": "C8",  "midi": 108, "led_range": [ 1480, 1498 ], "note_type": "White" }
+]

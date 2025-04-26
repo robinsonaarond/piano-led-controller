@@ -1,0 +1,713 @@
+[
+    {
+        "name": "Fs1",
+        "midi": 30,
+        "led_range": [
+            278,
+            300
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "G1",
+        "midi": 31,
+        "led_range": [
+            302,
+            336
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Gs1",
+        "midi": 32,
+        "led_range": [
+            338,
+            359
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "A2",
+        "midi": 33,
+        "led_range": [
+            362,
+            395
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "As2",
+        "midi": 34,
+        "led_range": [
+            398,
+            418
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "B2",
+        "midi": 35,
+        "led_range": [
+            422,
+            455
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "C2",
+        "midi": 36,
+        "led_range": [
+            458,
+            492
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Cs2",
+        "midi": 37,
+        "led_range": [
+            495,
+            513
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "D4",
+        "midi": 38,
+        "led_range": [
+            516,
+            550
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Ds4",
+        "midi": 39,
+        "led_range": [
+            552,
+            572
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "E2",
+        "midi": 40,
+        "led_range": [
+            575,
+            606
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "F2",
+        "midi": 41,
+        "led_range": [
+            610,
+            642
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Fs2",
+        "midi": 42,
+        "led_range": [
+            645,
+            664
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "G2",
+        "midi": 43,
+        "led_range": [
+            667,
+            701
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Gs2",
+        "midi": 44,
+        "led_range": [
+            704,
+            725
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "A3",
+        "midi": 45,
+        "led_range": [
+            727,
+            760
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "As3",
+        "midi": 46,
+        "led_range": [
+            764,
+            784
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "B3",
+        "midi": 47,
+        "led_range": [
+            787,
+            821
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "C3",
+        "midi": 48,
+        "led_range": [
+            825,
+            860
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Cs3",
+        "midi": 49,
+        "led_range": [
+            862,
+            882
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "D3",
+        "midi": 50,
+        "led_range": [
+            885,
+            917
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Ds3",
+        "midi": 51,
+        "led_range": [
+            919,
+            940
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "E3",
+        "midi": 52,
+        "led_range": [
+            942,
+            975
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "F3",
+        "midi": 53,
+        "led_range": [
+            979,
+            1010
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Fs3",
+        "midi": 54,
+        "led_range": [
+            1015,
+            1036
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "G3",
+        "midi": 55,
+        "led_range": [
+            1039,
+            1073
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Gs3",
+        "midi": 56,
+        "led_range": [
+            1076,
+            1098
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "A4",
+        "midi": 57,
+        "led_range": [
+            1100,
+            1133
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "As4",
+        "midi": 58,
+        "led_range": [
+            1136,
+            1158
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "B4",
+        "midi": 59,
+        "led_range": [
+            1160,
+            1191
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "C4",
+        "midi": 60,
+        "led_range": [
+            1,
+            29
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Cs4",
+        "midi": 61,
+        "led_range": [
+            32,
+            52
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "D4",
+        "midi": 62,
+        "led_range": [
+            54,
+            87
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Ds4",
+        "midi": 63,
+        "led_range": [
+            90,
+            111
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "E4",
+        "midi": 64,
+        "led_range": [
+            113,
+            145
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "F4",
+        "midi": 65,
+        "led_range": [
+            148,
+            180
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Fs4",
+        "midi": 66,
+        "led_range": [
+            185,
+            206
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "G4",
+        "midi": 67,
+        "led_range": [
+            208,
+            242
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Gs4",
+        "midi": 68,
+        "led_range": [
+            245,
+            266
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "A5",
+        "midi": 69,
+        "led_range": [
+            268,
+            300
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "As5",
+        "midi": 70,
+        "led_range": [
+            303,
+            323
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "B5",
+        "midi": 71,
+        "led_range": [
+            325,
+            359
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "C5",
+        "midi": 72,
+        "led_range": [
+            362,
+            395
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Cs5",
+        "midi": 73,
+        "led_range": [
+            399,
+            419
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "D5",
+        "midi": 74,
+        "led_range": [
+            422,
+            446
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Ds5",
+        "midi": 75,
+        "led_range": [
+            459,
+            470
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "E5",
+        "midi": 76,
+        "led_range": [
+            482,
+            508
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "F5",
+        "midi": 77,
+        "led_range": [
+            520,
+            549
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Fs5",
+        "midi": 78,
+        "led_range": [
+            557,
+            574
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "G5",
+        "midi": 79,
+        "led_range": [
+            581,
+            601
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Gs5",
+        "midi": 80,
+        "led_range": [
+            613,
+            625
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "A6",
+        "midi": 81,
+        "led_range": [
+            638,
+            664
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "As6",
+        "midi": 82,
+        "led_range": [
+            674,
+            696
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "B6",
+        "midi": 83,
+        "led_range": [
+            698,
+            732
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "C6",
+        "midi": 84,
+        "led_range": [
+            735,
+            772
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Cs6",
+        "midi": 85,
+        "led_range": [
+            774,
+            794
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "D6",
+        "midi": 86,
+        "led_range": [
+            796,
+            829
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Ds6",
+        "midi": 87,
+        "led_range": [
+            832,
+            852
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "E6",
+        "midi": 88,
+        "led_range": [
+            855,
+            889
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "F6",
+        "midi": 89,
+        "led_range": [
+            892,
+            916
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Fs6",
+        "midi": 90,
+        "led_range": [
+            925,
+            944
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "G7",
+        "midi": 91,
+        "led_range": [
+            948,
+            982
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Gs6",
+        "midi": 92,
+        "led_range": [
+            985,
+            1006
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "A7",
+        "midi": 93,
+        "led_range": [
+            1008,
+            1044
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "As7",
+        "midi": 94,
+        "led_range": [
+            1046,
+            1067
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "B7",
+        "midi": 95,
+        "led_range": [
+            1069,
+            1104
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "C7",
+        "midi": 96,
+        "led_range": [
+            1107,
+            1141
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Cs7",
+        "midi": 97,
+        "led_range": [
+            1144,
+            1165
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "D7",
+        "midi": 98,
+        "led_range": [
+            1168,
+            1200
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Ds7",
+        "midi": 99,
+        "led_range": [
+            1202,
+            1223
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "E7",
+        "midi": 100,
+        "led_range": [
+            1227,
+            1260
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "F7",
+        "midi": 101,
+        "led_range": [
+            1262,
+            1296
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Fs7",
+        "midi": 102,
+        "led_range": [
+            1299,
+            1320
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "G7",
+        "midi": 103,
+        "led_range": [
+            1322,
+            1356
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "Gs7",
+        "midi": 104,
+        "led_range": [
+            1359,
+            1380
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "A8",
+        "midi": 105,
+        "led_range": [
+            1383,
+            1416
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "As8",
+        "midi": 106,
+        "led_range": [
+            1421,
+            1443
+        ],
+        "note_type": "Black"
+    },
+    {
+        "name": "B8",
+        "midi": 107,
+        "led_range": [
+            1446,
+            1478
+        ],
+        "note_type": "White"
+    },
+    {
+        "name": "C8",
+        "midi": 108,
+        "led_range": [
+            1480,
+            1498
+        ],
+        "note_type": "White"
+    }
+]
