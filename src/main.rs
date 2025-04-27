@@ -97,31 +97,13 @@ fn start_midi_listener(tx: mpsc::Sender<note::NoteEvent>) {
                     let status = message[0] & 0xF0;
                     let note = message[1];
                     let velocity = message[2];
-                    let n_event: note::NoteEvent;
-
-                    match status {
-                        0x90 => {
-                            if velocity > 0 {
-                                // let _ = tx.blocking_send(note::NoteEvent::NoteOn(note, velocity));
-                                n_event = note::NoteEvent::NoteOn(note, velocity);
-                            } else {
-                                // let _ = tx.blocking_send(note::NoteEvent::NoteOff(note));
-                                n_event = note::NoteEvent::NoteOff(note);
-                            }
-                        }
-                        0x80 => {
-                            // let _ = tx.blocking_send(note::NoteEvent::NoteOff(note));
-                            n_event = note::NoteEvent::NoteOff(note);
-                        }
-                        0xB0 => {
-                            // let _ = tx.blocking_send(note::NoteEvent::ControlChange(note, velocity));
-                            n_event = note::NoteEvent::ControlChange(note, velocity);
-                        }
-                        _ => {
-                            // Basically a no-op event
-                            n_event = note::NoteEvent::NoteOff(0);
-                        }
-                    }
+                    let n_event = match status {
+                        0x90 if velocity > 0 => note::NoteEvent::NoteOn(note, velocity),
+                        0x90 | 0x80 => note::NoteEvent::NoteOff(note),
+                        0xB0 => note::NoteEvent::ControlChange(note, velocity),
+                        // Basically a no-op event
+                        _ => note::NoteEvent::NoteOff(0),
+                    };
                     let _ = tx.blocking_send(n_event);
                 }
             },

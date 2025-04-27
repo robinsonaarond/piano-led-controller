@@ -4,3 +4,5 @@ target/
 notes_config_all.json
 notes_config_safe.json
 notes_config_test.json
+*.swp
+*/*.swp
