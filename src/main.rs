@@ -97,24 +97,32 @@ fn start_midi_listener(tx: mpsc::Sender<note::NoteEvent>) {
                     let status = message[0] & 0xF0;
                     let note = message[1];
                     let velocity = message[2];
+                    let n_event: note::NoteEvent;
 
                     match status {
                         0x90 => {
                             if velocity > 0 {
-                                let _ = tx.blocking_send(note::NoteEvent::NoteOn(note, velocity));
+                                // let _ = tx.blocking_send(note::NoteEvent::NoteOn(note, velocity));
+                                n_event = note::NoteEvent::NoteOn(note, velocity);
                             } else {
-                                let _ = tx.blocking_send(note::NoteEvent::NoteOff(note));
+                                // let _ = tx.blocking_send(note::NoteEvent::NoteOff(note));
+                                n_event = note::NoteEvent::NoteOff(note);
                             }
                         }
                         0x80 => {
-                            let _ = tx.blocking_send(note::NoteEvent::NoteOff(note));
+                            // let _ = tx.blocking_send(note::NoteEvent::NoteOff(note));
+                            n_event = note::NoteEvent::NoteOff(note);
                         }
                         0xB0 => {
-                            let _ =
-                                tx.blocking_send(note::NoteEvent::ControlChange(note, velocity));
+                            // let _ = tx.blocking_send(note::NoteEvent::ControlChange(note, velocity));
+                            n_event = note::NoteEvent::ControlChange(note, velocity);
                         }
-                        _ => {}
+                        _ => {
+                            // Basically a no-op event
+                            n_event = note::NoteEvent::NoteOff(0);
+                        }
                     }
+                    let _ = tx.blocking_send(n_event);
                 }
             },
             (),
@@ -148,7 +156,6 @@ async fn main() {
         }
     });
 
-    println!("Now looping through the fade timer.");
     loop {
         // Handle incoming MIDI messages
         while let Ok(event) = rx.try_recv() {
@@ -176,8 +183,27 @@ async fn main() {
                 note::NoteEvent::NoteOff(midi_note) => {
                     let sustain = sustain_active.lock().await;
                     if *sustain {
+                        // Add it to list of notes to keep playing instead of removing it from
+                        // notes
                         let mut pending = pending_note_offs.lock().await;
-                        pending.push(midi_note);
+                        // Don't put it in twice
+                        if !pending.contains(&midi_note) {
+                            pending.push(midi_note);
+                        }
+
+                        // But also I do want to reduce the brightness a smidge to let you know
+                        // I've let go of the key, even if the note is holding out.  This doesn't
+                        // match what happens with the sound but it will look better, more like "oh
+                        // he took his finger off the note right then."
+                        let mut notes = shared_notes.lock().await;
+                        for note in notes.iter_mut() {
+                            if note.config.midi == midi_note {
+                                let float_intensity = note.intensity as f32;
+                                let float_int_birth = note.int_birth as f32;
+                                note.intensity = (float_intensity * 0.5) as u8;
+                                note.int_birth = (float_int_birth * 0.5) as u8;
+                            }
+                        }
                     } else {
                         let mut notes = shared_notes.lock().await;
                         notes.retain(|n| n.config.midi != midi_note);
@@ -246,10 +272,10 @@ async fn main() {
                 note.intensity = decayed_intensity as u8;
             } else if (ATTACK..=SUSTAIN).contains(&current_percent) {
                 // 100% -> 50%
-                note.intensity = (decayed_intensity * 0.3) as u8;
+                note.intensity = (decayed_intensity * 0.7) as u8;
             } else if (SUSTAIN..=DECAY).contains(&current_percent) {
                 // 50% -> 0%
-                note.intensity = (decayed_intensity * 0.1) as u8;
+                note.intensity = (decayed_intensity * 0.3) as u8;
             } else {
                 note.intensity = 0_u8;
             }
